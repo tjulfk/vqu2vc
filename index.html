@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>VQU2VC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/cayman.css">
+    <style>
+      ul.b {list-style-type: square;}
+    </style>
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">VQU2VC</h1>
+      <h2 class="project-tagline">Fangkun Liu, Hui Wang, Yuxuan Ke, Chengshi Zheng, Xiaodong Li</h2>
+      <!-- <a href="" class="btn">Paper</a> -->
+      <!-- <a href="#" class="btn">Code</a> -->
+      <!-- <a href="#" class="btn">Download .tar.gz</a> -->
+    </section>
+
+    <section class="main-content">
+      <h1>
+      <a id="user-content-header-1" class="anchor" href="#header-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Title</h1>
+      <p style="font-size:30px;">One-Shot Voice Conversion with U2-Net and Vector Quantization</p>
+  
+      <h1>
+      <a id="user-content-header-1" class="anchor" href="#header-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h1>
+      <p>This page is for audio demo samples of our work. The demo samples show that our proposed approach can improves the naturalness of the converted
+        whlile prevent the source speaker style leakage. It has to be noted that the model is only trained with VCTK corpus. <p>
+      <h1>
+      <a id="user-content-header-1" class="anchor" href="#header-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h1>
+
+
+      <h2>
+        <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Source speaker style leakage situaiton. Compared to U2VC, the proposed approach degrade the style leakage, and improve the naturalness compared to other approaches</h2>
+        
+        <style type="text/css">
+  .tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+  .tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+    font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+    font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+  .tg .tg-duar{background-color:#f9f9f9;border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+  .tg .tg-bgm4{border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+  .tg .tg-6k0d{border-color:#9b9b9b;text-align:center;vertical-align:middle}
+  .tg .tg-1fos{background-color:#f9f9f9;border-color:#9b9b9b;text-align:center;vertical-align:middle}
+  </style>
+        
+  <table class="tg">
+  <tbody>
+    <tr>
+      <td class="tg-bgm4" rowspan="2">Source audio</td>
+      <td class="tg-bgm4" rowspan="2">Target voice</td>
+      <td class="tg-bgm4" colspan="5">Converted audio</td>
+    </tr>
+    <tr>
+      <td class="tg-duar">AGAIN-VC</td>
+      <td class="tg-duar">VQVC+</td>
+      <td class="tg-duar">U2VC</td>
+      <td class="tg-duar">VQU2-VC(S)</td>
+      <td class="tg-duar">Proposed VQU2-VC(D)</td>
+  
+    </tr>
+    <tr>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\source\p362_010.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\target\p255_012.wav" type="audio/wav">
+        </audio>    
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\AGAINVC\p362_010_to_p255_012.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\VQVC\p362_010_to_p255_012.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\U2VC\p362_010_to_p255_012.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\VQU2VCs\p362_010_to_p255_012.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\VQU2VCd\p362_010_to_p255_012.wav" type="audio/wav">
+        </audio>
+      </td>
+    </tr>
+    <tr>
+
+      <td class="tg-1fos">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\source\p360_012.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-1fos">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\target\p255_003.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\AGAINVC\p360_012_to_p255_003.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\VQVC\p360_012_to_p255_003.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\U2VC\p360_012_to_p255_003.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\VQU2VCs\p360_012_to_p255_003.wav" type="audio/wav">
+        </audio>
+      </td>
+      <td class="tg-6k0d">
+        <audio controls>
+          <source src="./audioforpaper\lk situation\VQU2VCd\p360_012_to_p255_003.wav" type="audio/wav">
+        </audio>
+      </td>
+    </tr>
+  
+
+  </tbody>
+  </table>
+      
+      
+      <h2>
+      <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Seen-to-seen conversion</h2>
+      
+      <style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-duar{background-color:#f9f9f9;border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-bgm4{border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-6k0d{border-color:#9b9b9b;text-align:center;vertical-align:middle}
+.tg .tg-1fos{background-color:#f9f9f9;border-color:#9b9b9b;text-align:center;vertical-align:middle}
+</style>
+      
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-bgm4" rowspan="2">Case</td>
+    <td class="tg-bgm4" rowspan="2">Source audio</td>
+    <td class="tg-bgm4" rowspan="2">Target voice</td>
+    <td class="tg-bgm4" colspan="5">Converted audio</td>
+  </tr>
+  <tr>
+    <td class="tg-duar">AGAIN-VC</td>
+    <td class="tg-duar">VQVC+</td>
+    <td class="tg-duar">U2VC</td>
+    <td class="tg-duar">VQU2-VC(S)</td>
+    <td class="tg-duar">Proposed VQU2-VC(D)</td>
+
+  </tr>
+  <tr>
+    <td class="tg-6k0d">Female to Female</td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\source\p225_003.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\target\p262_002.wav" type="audio/wav">
+      </audio>    
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AGAINVC\p225_003_to_p262_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQVC\p225_003_to_p262_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\U2VC\p225_003_to_p262_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQU2VCs\p225_003_to_p262_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQU2VCd\p225_003_to_p262_002.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-1fos">Female to Male</td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\source\p225_003.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\target\p270_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AGAINVC\p225_003_to_p270_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQVC\p225_003_to_p270_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\U2VC\p225_003_to_p270_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQU2VCs\p225_003_to_p270_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQU2VCd\p225_003_to_p270_007.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-6k0d">Male to Female</td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\source\p237_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\target\p262_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AGAINVC\p237_004_to_p262_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQVC\p237_004_to_p262_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\U2VC\p237_004_to_p262_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQU2VCs\p237_004_to_p262_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQU2VCd\p237_004_to_p262_002.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-1fos">Male to Male</td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\source\p241_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\target\p271_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\AGAINVC\p241_010_to_p271_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQVC\p241_010_to_p271_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\U2VC\p241_010_to_p271_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQU2VCs\p241_010_to_p271_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\s2s\VQU2VCd\p241_010_to_p271_007.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+<h2>
+      <a id="user-content-header-2" class="anchor" href="#header-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Uneen-to-unseen conversion</h2>
+<style type="text/css">
+.tg  {border-collapse:collapse;border-color:#ccc;border-spacing:0;}
+.tg td{background-color:#fff;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{background-color:#f0f0f0;border-color:#ccc;border-style:solid;border-width:1px;color:#333;
+  font-family:Arial, sans-serif;font-size:14px;font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-duar{background-color:#f9f9f9;border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-bgm4{border-color:#9b9b9b;font-weight:bold;text-align:center;vertical-align:middle}
+.tg .tg-6k0d{border-color:#9b9b9b;text-align:center;vertical-align:middle}
+.tg .tg-1fos{background-color:#f9f9f9;border-color:#9b9b9b;text-align:center;vertical-align:middle}
+</style>
+<table class="tg">
+<tbody>
+  <tr>
+    <td class="tg-bgm4" rowspan="2">Case</td>
+    <td class="tg-bgm4" rowspan="2">Source audio</td>
+    <td class="tg-bgm4" rowspan="2">Target voice</td>
+    <td class="tg-bgm4" colspan="5">Converted audio</td>
+  </tr>
+  <tr>
+    <td class="tg-duar">AGAIN-VC</td>
+    <td class="tg-duar">VQVC+</td>
+    <td class="tg-duar">U2-VC</td>
+    <td class="tg-duar">VQU2-VC(S)</td>
+    <td class="tg-duar">Proposed VQU2-VC(D)</td>
+  </tr>
+  <tr>
+    <td class="tg-6k0d">Female to Female</td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\source\p313_002.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\target\p323_007.wav" type="audio/wav">
+      </audio>    
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AGAINVC\p313_002_to_p323_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQVC\p313_002_to_p323_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\U2VC\p313_002_to_p323_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQU2VCs\p313_002_to_p323_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQU2VCd\p313_002_to_p323_007.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-1fos">Female to Male</td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\source\p362_010.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\target\p360_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AGAINVC\p362_010_to_p360_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQVC\p362_010_to_p360_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\U2VC\p362_010_to_p360_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQU2VCs\p362_010_to_p360_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQU2VCd\p362_010_to_p360_007.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-6k0d">Male to Female</td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\source\p345_007.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\target\p336_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AGAINVC\p345_007_to_p336_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQVC\p345_007_to_p336_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\U2VC\p345_007_to_p336_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-6k0d">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQU2VCs\p345_007_to_p336_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQU2VCd\p345_007_to_p336_004.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+  <tr>
+    <td class="tg-1fos">Male to Male</td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\source\p334_003.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\target\p376_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\AGAINVC\p334_003_to_p376_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQVC\p334_003_to_p376_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\U2VC\p334_003_to_p376_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQU2VCs\p334_003_to_p376_004.wav" type="audio/wav">
+      </audio>
+    </td>
+    <td class="tg-1fos">
+      <audio controls>
+        <source src="./audioforpaper\u2u\VQU2VCd\p334_003_to_p376_004.wav" type="audio/wav">
+      </audio>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+
+
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/tjulfk">Fangkun Liu</a>.</span>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+
+    </section>
+
+  </body>
+</html>
